@@ -86,7 +86,9 @@ class Employee_model extends CI_Model{
 		$result=$this->db->get('employees_tbl');
 		foreach($result->result() as $row)
 		{
-			unlink($row->image);
+			if (file_exists($row->image) && is_file($row->image)) {
+				unlink($row->image);
+			}
 		}
 		//delete record from db
 		$this->db->where_in('emp_id', $i);

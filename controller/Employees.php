@@ -20,7 +20,10 @@ class Employees extends CI_Controller{
 		if($this->form_validation->run() === TRUE)
 		{
             //image work
-			$target_dir = mkdir("images");
+            if(!is_dir("images"))
+            {
+                mkdir("images", 0755, true);
+            }
             $target_dir= "images/";
 			$temp = explode(".", $_FILES["inpFile"]["name"]);
 			$newfilename = rand(0, 10000) . '_pic' . '.' . end($temp);
@@ -165,7 +168,10 @@ class Employees extends CI_Controller{
 			$img=$_FILES['inpFile']['name'];
 			if($img)
 			{
-				unlink($target_file);
+				if (file_exists($target_file) && is_file($target_file))
+				{
+					unlink($target_file);
+				}
 				$target_dir = "images/";
 				$newfilename = rand(0, 10000) . '_pic' . '.' . end($temp);
 				$target_file = $target_dir . $newfilename;
