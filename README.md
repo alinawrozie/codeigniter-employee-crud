@@ -4,7 +4,7 @@
 [![Framework](https://img.shields.io/badge/framework-CodeIgniter%203-red.svg)](https://codeigniter.com/)
 [![Database](https://img.shields.io/badge/database-MySQL%20%2F%20MariaDB-orange.svg)](https://www.mysql.com/)
 
-A polished, full-featured **Employee Management CRUD System** built with **CodeIgniter 3 (MVC Architecture)**, MySQL, Bootstrap 4, and jQuery. This application provides standard and bulk management of employee profiles, complete with validation, image uploading, search, and pagination.
+**Employee Management CRUD System** built with **CodeIgniter 3 (MVC Architecture)**, MySQL, Bootstrap 4, and jQuery. This application provides standard and bulk management of employee profiles, complete with validation, image uploading, search, and pagination.
 
 ---
 
